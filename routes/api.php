@@ -1,7 +1,10 @@
 <?php
 
 use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\CategoriaController;
 use App\Http\Controllers\Api\ClienteController;
+use App\Http\Controllers\Api\ProductoController;
+use App\Http\Controllers\Api\UnidadController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -19,6 +22,12 @@ Route::middleware('auth:sanctum')->group(function () {
 });
 # Cliente
 Route::get('/clientes', [ClienteController::class, 'index']);
+# Producto
+Route::get('/productos', [ProductoController::class, 'index']);
+# Categoria
+Route::get('/categorias', [CategoriaController::class, 'index']);
+# Unidad
+Route::get('/unidades', [UnidadController::class, 'index']);
 // Route::middleware('auth:sanctum')->group(function () {
 //     Route::get('/clientes', [ClienteController::class, 'index']);
 // });

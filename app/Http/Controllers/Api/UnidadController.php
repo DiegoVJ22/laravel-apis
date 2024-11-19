@@ -3,19 +3,19 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Models\Cliente;
+use App\Models\Unidad;
 use Illuminate\Http\Request;
 
-class ClienteController extends Controller
+class UnidadController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $clientes = Cliente::all();
+        $unidades = Unidad::all();
         return response()->json([
-            'value' => $clientes
+            'value' => $unidades
         ],200);
     }
 
