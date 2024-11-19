@@ -18,6 +18,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout']);
 });
 # Cliente
-Route::middleware('auth:sanctum')->group(function () {
-    Route::get('/clientes', [ClienteController::class, 'index']);
-});
+Route::get('/clientes', [ClienteController::class, 'index']);
+// Route::middleware('auth:sanctum')->group(function () {
+//     Route::get('/clientes', [ClienteController::class, 'index']);
+// });
