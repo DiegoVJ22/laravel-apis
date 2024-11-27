@@ -17,7 +17,7 @@ Route::post('/login', [AuthController::class, 'login']);
 # Rutas con Auth
 Route::middleware('auth:sanctum')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout']); // logout
-    Route::get('/clientes', [ClienteController::class, 'index']); // lista de cliente
+    Route::apiResource('clientes', ClienteController::class); // lista de cliente
     Route::get('/productos', [ProductoController::class, 'index']); // lista de productos
     Route::get('/unidades', [UnidadController::class, 'index']); // lista de unidades
     Route::get('/categorias', [CategoriaController::class, 'index']); // lista de categorias

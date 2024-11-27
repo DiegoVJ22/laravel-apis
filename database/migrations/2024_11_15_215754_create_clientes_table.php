@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('apellido',80);
             $table->string('email',100);
             $table->string('direccion',100);
-            $table->boolean('estado');
+            $table->boolean('estado')->default(true);;
         });
     }
 

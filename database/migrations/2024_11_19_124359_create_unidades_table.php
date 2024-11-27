@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('unidades', function (Blueprint $table) {
             $table->id();
             $table->string('descripcion',30);
-            $table->boolean('estado');
+            $table->boolean('estado')->default(true);;
         });
     }
 

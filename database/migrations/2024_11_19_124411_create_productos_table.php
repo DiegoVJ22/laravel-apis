@@ -14,12 +14,11 @@ return new class extends Migration
         Schema::create('productos', function (Blueprint $table) {
             $table->id();
             $table->string('descripcion',30);
-            $table->boolean('estado');
+            $table->boolean('estado')->default(true);;
             $table->integer('stock');
             $table->float('precio');
             $table->unsignedBigInteger('id_categoria');
             $table->unsignedBigInteger('id_unidad');
-
             // FK
             $table->foreign('id_categoria')->references('id')->on('categorias');
             $table->foreign('id_unidad')->references('id')->on('unidades');
